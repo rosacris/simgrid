@@ -66,6 +66,7 @@ void SIMIX_pre_process_change_host(smx_process_t process,
 				   smx_host_t dest);
 void SIMIX_process_change_host(smx_process_t process,
 			       smx_host_t dest);
+void SIMIX_pre_process_change_host(smx_process_t process, smx_host_t host);
 void SIMIX_pre_process_suspend(smx_req_t req);
 void SIMIX_process_suspend(smx_process_t process, smx_process_t issuer);
 void SIMIX_process_resume(smx_process_t process, smx_process_t issuer);

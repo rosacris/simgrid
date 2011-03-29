@@ -237,8 +237,8 @@ void SIMIX_process_change_host(smx_process_t process,
 			       smx_host_t dest)
 {
   xbt_assert((process != NULL), "Invalid parameters");
-  process->smx_host = dest;
   xbt_swag_remove(process, process->smx_host->process_list);
+  process->smx_host = dest;
   xbt_swag_insert(process, dest->process_list);
 }
 
