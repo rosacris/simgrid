@@ -222,7 +222,7 @@ MSG_error_t MSG_process_change_host(m_host_t host)
 #ifdef HAVE_TRACING
   TRACE_msg_process_change_host(process, now, host);
 #endif
-  SIMIX_req_process_change_host(process, now->name, host->name);
+  SIMIX_req_process_change_host(process, host->simdata->smx_host);
   return MSG_OK;
 }
 
